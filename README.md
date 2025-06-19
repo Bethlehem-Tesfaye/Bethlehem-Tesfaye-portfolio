@@ -1,12 +1,42 @@
-# React + Vite
+# Bethlehem Tesfaye - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! This project showcases my skills, experience, and projects as a passionate Computer Science student and full-stack developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [About](#about)  
+- [Features](#features)  
+- [Technologies Used](#technologies-used) 
+- [Deployment](#deployment)  
+- [Contact](#contact)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## About
+
+This portfolio website presents my background, skills, and work. It is designed to be responsive and user-friendly, highlighting my journey and projects in web development.
+
+---
+
+## Features
+
+- Responsive design for desktop and mobile  
+- Smooth animations and transitions  
+- Sections: About, Experience, Projects, Contact  
+- Interactive contact button with mailto link  
+- Project showcase with demo and source links  
+
+---
+
+## Technologies Used
+
+- React.js  
+- Vite (build tool)  
+- CSS3 with responsive media queries  
+- React Icons  
+- Node.js (for development environment)  
+
+---
+
