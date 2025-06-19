@@ -4,6 +4,7 @@ import noteapp from "../../assets/noteapp.png";
 import bookapp from "../../assets/bookapp.png";
 import ecapp from "../../assets/ecapp.png";
 import realapp from "../../assets/realapp.png";
+import authapp from "../../assets/authapp.png";
 import "./projects.css";
 function Projects() {
   return (
@@ -61,12 +62,12 @@ function Projects() {
 
         <div className="prj">
           <div className="prjimg">
-            <img src={resapp} alt="image" />
+            <img src={authapp} alt="image" />
           </div>
           <div className="prjdes">
             <p>Complete Mern Authentication system </p>
             <p>
-              A full-featured authentication system built with the MERN stack. It includes secure user registration, login, logout, email verification via OTP, password reset Via OTP, and protected routes using JWT and cookies. Designed with robust backend validation and a responsive frontend to provide a seamless and secure user experience.
+              A full-featured authentication system built with the MERN stack. Includes secure user registration, login, logout, email verification via OTP, password reset and protected routes using JWT and cookies.
             </p>
           </div>
           <div className="used">
