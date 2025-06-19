@@ -3,7 +3,7 @@ import Contact from "./components/contact/Contact.jsx";
 import Hero from "./components/hero/Hero.jsx";
 import NavBar from "./components/navbar/NavBar.jsx";
 import Projects from "./components/projects/Projects.jsx";
-import Experience from "./components/experience/experience.jsx";
+import Skills from "./components/experience/Skills.jsx";
 
 function App() {
   
@@ -14,7 +14,7 @@ function App() {
         <NavBar/>
         <Hero/>
         <About/>
-        <Experience/>
+        <Skills/>
         <Projects/>
         <Contact/>
       </div>

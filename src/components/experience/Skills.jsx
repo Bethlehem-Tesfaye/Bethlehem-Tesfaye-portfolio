@@ -1,7 +1,7 @@
 import React from "react";
 import "./experience.css";
 
-const Experience = () => {
+const Skills = () => {
   const skillsData = [
     {
     title: "Programming Languages",
@@ -40,4 +40,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skills;
