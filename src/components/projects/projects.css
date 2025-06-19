@@ -1,0 +1,111 @@
+.prjContainer{
+    /* margin-top: 70px; */
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    gap:50px;
+}
+.prjContainer h2{
+    text-align: center;
+}
+.prjBox{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    /* background: red; */
+}
+
+.prjContainer img{
+    width: 100%;
+    height: 120px;
+}
+.prjdes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.used{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.used div{
+    background: #384e6e;
+    padding: 7px 9px;
+    border-radius: 8px;
+}
+.prj .links{
+    display: flex;
+    gap: 20px;
+}
+.prj .links button{
+    background: rgba(87, 108, 188, 1);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+.prj {
+  background-color: #021f47;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* background: red; */
+}
+
+.prj:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(55, 125, 255, 0.3);
+}
+
+/* For image pop effect */
+.prjimg {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.prjimg img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.prj:hover .prjimg img {
+  transform: scale(1.1);
+}
+.prj .links button {
+  background: rgba(87, 108, 188, 1);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.prj .links button:hover {
+  transform: scale(1.05);
+  background-color: rgba(63, 85, 160, 1); /* slightly darker */
+}
+
+
+@media screen and (max-width: 1029px){
+    .prjBox{
+        justify-content: center;
+    }
+} 
+@media screen and (max-width: 494px){
+    .prjContainer{
+        padding: 70px;
+    }
+    .prj{
+        width: 100%;
+    }
+} 

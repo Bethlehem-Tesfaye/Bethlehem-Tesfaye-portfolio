@@ -1,0 +1,18 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--textColor);
+}
+:root{
+  --background:#04152D;
+  --textColor:white;
+}
+.appContainer{
+  background: var(--background);
+  width: 100%;
+  padding-top: 40px;
+}
+html {
+  scroll-behavior: smooth;
+}

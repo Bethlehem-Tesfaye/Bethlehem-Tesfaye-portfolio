@@ -1,0 +1,93 @@
+.cContainer {
+  width: 100%;
+  background: #19376D;
+  padding: 50px 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.cContainer img {
+  width: 40px;
+  height: 40px;
+}
+
+.cLeft {
+  color: white;
+  max-width: 400px;
+}
+
+.cLeft h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cLeft p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.cRight div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.cRight a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.cRight a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Responsive styles */
+@media screen and (max-width: 768px) {
+  .cContainer {
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cRight div {
+    justify-content: center;
+  }
+
+  .cRight a {
+    font-size: 0.95rem;
+  }
+
+  .cContainer img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cLeft h1 {
+    font-size: 1.75rem;
+  }
+
+  .cLeft p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cContainer {
+    padding: 30px 20px;
+  }
+
+  .cRight a {
+    font-size: 0.85rem;
+  }
+
+  .cLeft h1 {
+    font-size: 1.5rem;
+  }
+}

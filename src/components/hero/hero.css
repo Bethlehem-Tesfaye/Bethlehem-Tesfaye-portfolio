@@ -1,0 +1,175 @@
+.heroContainer {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  gap: 30px;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.heroLeft .intro {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.heroLeft .description {
+  color: #FFF;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+.heroBtn {
+  width: 200px;
+  height: 53px;
+  border-radius: 100px;
+  background: #576CBC;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Image styling */
+.heroRight .box img {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+}
+.heroBtn:hover{
+    transform: scale(1.05);
+    background-color: #2c3661;
+}
+
+/* Responsive: tablets and below */
+@media screen and (max-width: 768px) {
+  .heroLeft .intro {
+    font-size: 32px;
+  }
+
+  .heroLeft .description {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .heroBtn {
+    width: 180px;
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .heroRight .box img {
+    width: 250px;
+  }
+  
+}
+@media screen and (max-width: 995px) {
+  .heroContainer {
+    flex-direction: column-reverse;
+  }
+  .heroLeft .intro {
+    font-size: 40px;
+  }
+
+  .heroLeft .description {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+}
+/* Responsive: mobile screens */
+@media screen and (max-width: 480px) {
+  .heroLeft .intro {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .heroLeft .description {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .heroBtn {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .heroRight .box img {
+    width: 200px;
+  }
+
+}
+@media screen and (max-width: 412px) {
+  .heroLeft .intro {
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .heroLeft .description {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .heroBtn {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .heroRight .box img {
+    width: 200px;
+  }
+}
+/* Animation Keyframes */
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+.fade-in-left {
+  animation: fadeInLeft 1s ease forwards;
+  opacity: 0;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease forwards;
+  opacity: 0;
+}
+
+/* Delay classes */
+.delay {
+  animation-delay: 0.4s;
+}
+
+.delay-2 {
+  animation-delay: 0.8s;
+}
