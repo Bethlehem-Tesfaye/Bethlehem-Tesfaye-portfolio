@@ -24,7 +24,7 @@ function Contact() {
         <div>
           <img src={link} alt="linkedin logo" />
           <a href="https://www.linkedin.com/in/bethlehem-tesfaye-b267932a8/">
-            linkedin.com/BethlehemTesfaye
+            linkedin.com/BethlehemTesfayez
           </a>
         </div>
         <div>

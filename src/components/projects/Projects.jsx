@@ -61,6 +61,39 @@ function Projects() {
 
         <div className="prj">
           <div className="prjimg">
+            <img src={resapp} alt="image" />
+          </div>
+          <div className="prjdes">
+            <p>Complete Mern Authentication system </p>
+            <p>
+              A full-featured authentication system built with the MERN stack. It includes secure user registration, login, logout, email verification via OTP, password reset Via OTP, and protected routes using JWT and cookies. Designed with robust backend validation and a responsive frontend to provide a seamless and secure user experience.
+            </p>
+          </div>
+          <div className="used">
+            <div>React</div>
+            <div>Tailwind CSS</div>
+            <div>Node.js</div>
+            <div>Express</div>
+            <div>MongoDB</div>
+          </div>
+          <div className="links">
+            <button>
+              <a
+                href="https://complete-mern-authentication-system-1.onrender.com/
+" target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo
+              </a>
+            </button>
+            <button>
+              <a href="https://github.com/Bethlehem-Tesfaye/complete-mern-Authentication-system">Source</a>
+            </button>
+          </div>
+        </div>
+
+        <div className="prj">
+          <div className="prjimg">
             <img src={noteapp} alt="image" />
           </div>
           <div className="prjdes">
