@@ -33,30 +33,40 @@ function Projects() {
             <button>
               <a
                 href="https://phpresturnatwebapp.infinityfreeapp.com
-" target="_blank"
+"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Demo
               </a>
             </button>
             <button>
-              <a href="https://github.com/Bethlehem-Tesfaye/resturant-app-php-mysql" target="_blank"
-                rel="noopener noreferrer">Source</a>
+              <a
+                href="https://github.com/Bethlehem-Tesfaye/resturant-app-php-mysql"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source
+              </a>
             </button>
           </div>{" "}
           <br />
           <div className="links">
-            for Admin
+            <p>
+              {/* <strong>Admin Demo</strong> */}
+            </p>
             <button>
               <a
-                href="https://phpadminresturantapp.infinityfreeapp.com/
-" target="_blank"
+                href="https://phpadminresturantapp.infinityfreeapp.com/"
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                Demo
+                Admin Demo
               </a>
             </button>
-            
+            <p className="credentials-note">
+              <em>Username: beth_lehem Password: admin123</em>
+            </p>
           </div>
         </div>
 
@@ -67,7 +77,10 @@ function Projects() {
           <div className="prjdes">
             <p>Complete Mern Authentication system </p>
             <p>
-              A full-featured authentication system built with the MERN stack. Includes secure user registration, login, logout, email verification via OTP, password reset and protected routes using JWT and cookies.
+              A full-featured authentication system built with the MERN stack.
+              Includes secure user registration, login, logout, email
+              verification via OTP, password reset and protected routes using
+              JWT and cookies.
             </p>
           </div>
           <div className="used">
@@ -81,14 +94,17 @@ function Projects() {
             <button>
               <a
                 href="https://complete-mern-authentication-system-1.onrender.com/
-" target="_blank"
+"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 Demo
               </a>
             </button>
             <button>
-              <a href="https://github.com/Bethlehem-Tesfaye/complete-mern-Authentication-system">Source</a>
+              <a href="https://github.com/Bethlehem-Tesfaye/complete-mern-Authentication-system">
+                Source
+              </a>
             </button>
           </div>
         </div>
@@ -115,14 +131,22 @@ function Projects() {
 
           <div className="links">
             <button>
-              <a href="https://client-note-app-mern-stackk.onrender.com" target="_blank"
-                rel="noopener noreferrer">
+              <a
+                href="https://client-note-app-mern-stackk.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Demo
               </a>
             </button>
             <button>
-              <a href="https://github.com/Bethlehem-Tesfaye/NOTE-APP-MERN-STACK" target="_blank"
-                rel="noopener noreferrer">Source</a>
+              <a
+                href="https://github.com/Bethlehem-Tesfaye/NOTE-APP-MERN-STACK"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source
+              </a>
             </button>
           </div>
         </div>
@@ -148,12 +172,22 @@ function Projects() {
 
           <div className="links">
             <button>
-              <a href="https://client-book-app-mern.onrender.com" target="_blank"
-                rel="noopener noreferrer">Demo</a>
+              <a
+                href="https://client-book-app-mern.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo
+              </a>
             </button>
             <button>
-              <a href="https://github.com/Bethlehem-Tesfaye/book-app-mern" target="_blank"
-                rel="noopener noreferrer">Source</a>
+              <a
+                href="https://github.com/Bethlehem-Tesfaye/book-app-mern"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source
+              </a>
             </button>
           </div>
         </div>
