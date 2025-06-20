@@ -26,6 +26,7 @@ function Projects() {
           <div className="used">
             <div>html</div>
             <div>css</div>
+            <div>js</div>
             <div>php</div>
             <div>mysql</div>
           </div>
