@@ -12,7 +12,10 @@ function Hero() {
           <br />
           Reach out if you’d like to know more!
         </p>
-        <button className="heroBtn fade-in-left delay-2"><a href="mailto:bethlehem.tesfaye15@gmail.com">Contact Me</a></button>
+        <div>
+        <button className="heroBtn fade-in-left delay-2"><a href="mailto:bethlehem.tesfaye15@gmail.com">Contact Me</a></button> 
+        <button className="heroBtn fade-in-left delay-2"><a href="https://1drv.ms/w/c/4853efb02749f323/EbuI10kSlP9GnS84EtQt8KMBOoicC094zbm4DrNkbElhMQ?e=eZbf2n" target="_blank">See resume</a></button>
+        </div>
       </div>
       <div className="heroRight">
         <div className="box fade-in-right">
