@@ -1,42 +1,30 @@
-# Bethlehem Tesfaye - Portfolio
+# My Portfolio Website
 
-Welcome to my personal portfolio website! This project showcases my skills, experience, and projects as a passionate Computer Science student and full-stack developer.
-
----
-
-## Table of Contents
-
-- [About](#about)  
-- [Features](#features)  
-- [Technologies Used](#technologies-used) 
-- [Deployment](#deployment)  
-- [Contact](#contact)  
-
----
-
-## About
-
-This portfolio website presents my background, skills, and work. It is designed to be responsive and user-friendly, highlighting my journey and projects in web development.
-
----
+This is the source code for my personal portfolio website, [alan-khalili.com](https://alan-khalili.com). The website showcases my programming skills and experience through various sections, including an introductory greeting, a marquee displaying my GitHub repositories, an experience section, a projects section, and a contact form.
 
 ## Features
 
-- Responsive design for desktop and mobile  
-- Smooth animations and transitions  
-- Sections: About, Experience, Projects, Contact  
-- Interactive contact button with mailto link  
-- Project showcase with demo and source links  
-
----
+- **Introductory Greeting**: A welcoming message to visitors.
+- **GitHub Repos Marquee**: A scrolling marquee displaying my GitHub repositories.
+- **Experience Section**: Details about my professional experience and skills.
+- **Projects Section**: Highlights of my notable projects.
+- **Contact Form**: A form for visitors to leave a message or get in touch.
 
 ## Technologies Used
 
-- React.js  
-- Vite (build tool)  
-- CSS3 with responsive media queries  
-- React Icons  
-- Node.js (for development environment)  
+- **Frontend**: React, TypeScript, Vite, and Tailwind CSS
+- **Dependencies**: motion, react-fast-marquee, react-icons, react-rough-notation
 
----
+## Design Inspiration
 
+The design of this website was inspired by [Arc.net](https://arc.net).
+
+## Setup and Usage
+
+To run the website locally, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/AlanKha/Portfolio.git`
+2. Navigate to the project directory: `cd Portfolio`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm run dev`
+5. Open your web browser and visit `http://localhost:5173` to view the website.
