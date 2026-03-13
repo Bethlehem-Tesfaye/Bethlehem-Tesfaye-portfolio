@@ -1,7 +1,7 @@
 import { aau, auth, chat, event, expense, house, res, swen } from "../assets";
 
 export const RESUME_LINK =
-  "https://drive.google.com/file/d/1pBfRRrPAmKcU7uzxakewv9khdvu5EC5g/view";
+  "https://drive.google.com/file/d/13RcRMfZogPtFcJqAej3eFNwNiE46fGsP/view?usp=sharing";
 
 export const heroContent = {
   greeting: "Hi, my name is",
