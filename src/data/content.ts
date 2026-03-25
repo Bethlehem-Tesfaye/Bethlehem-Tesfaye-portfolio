@@ -82,8 +82,7 @@ export const projects: ProjectItem[] = [
       "shadcn/ui",
     ],
     link: "https://frontend-event-mangment-pr-64.onrender.com",
-    githubLink:
-      "https://github.com/Bethlehem-Tesfaye/complete-mern-Authentication-system",
+    githubLink: "https://github.com/Bethlehem-Tesfaye/Event-mangment",
   },
   {
     id: "expense-tracker",
@@ -103,8 +102,9 @@ export const projects: ProjectItem[] = [
       "PostgreSQL",
       "TanStack Query",
     ],
-    link: "YOUR_DEPLOYMENT_LINK",
-    githubLink: "YOUR_GITHUB_LINK",
+    link: "https://github.com/Bethlehem-Tesfaye/Automated-Expense-Tracker",
+    githubLink:
+      "https://github.com/Bethlehem-Tesfaye/Automated-Expense-Tracker",
   },
   {
     id: "blink-chat-app",
