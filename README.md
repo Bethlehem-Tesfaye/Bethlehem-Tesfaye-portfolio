@@ -1,30 +1,33 @@
-# My Portfolio Website
+# 👩‍💻 Beth’s Developer Portfolio
 
-This is the source code for my personal portfolio website, [alan-khalili.com](https://alan-khalili.com). The website showcases my programming skills and experience through various sections, including an introductory greeting, a marquee displaying my GitHub repositories, an experience section, a projects section, and a contact form.
+Welcome to my portfolio.
 
-## Features
+I build full-stack applications with a focus on backend systems, clean architecture, and real-world usability.
 
-- **Introductory Greeting**: A welcoming message to visitors.
-- **GitHub Repos Marquee**: A scrolling marquee displaying my GitHub repositories.
-- **Experience Section**: Details about my professional experience and skills.
-- **Projects Section**: Highlights of my notable projects.
-- **Contact Form**: A form for visitors to leave a message or get in touch.
+---
 
-## Technologies Used
+## About Me
 
-- **Frontend**: React, TypeScript, Vite, and Tailwind CSS
-- **Dependencies**: motion, react-fast-marquee, react-icons, react-rough-notation
+I’m a 4th-year Computer Science student focused on becoming a strong full-stack engineer.
 
-## Design Inspiration
+### What I care about:
 
-The design of this website was inspired by [Arc.net](https://arc.net).
+- Scalable and maintainable systems
+- Clean, readable code
+- Turning ideas into real products
 
-## Setup and Usage
+---
 
-To run the website locally, follow these steps:
+## Contact
 
-1. Clone the repository: `git clone https://github.com/AlanKha/Portfolio.git`
-2. Navigate to the project directory: `cd Portfolio`
-3. Install dependencies: `npm install`
-4. Start the development server: `npm run dev`
-5. Open your web browser and visit `http://localhost:5173` to view the website.
+- GitHub: https://github.com/Bethlehem-Tesfaye
+- LinkedIn: https://www.linkedin.com/in/bethlehem-tesfaye-b267932a8/
+- Email: bethlehem.tesfaye15@gmail.com
+
+---
+
+## ⭐ Notes
+
+This portfolio reflects my growth as a developer.
+
+More projects and improvements are coming.
