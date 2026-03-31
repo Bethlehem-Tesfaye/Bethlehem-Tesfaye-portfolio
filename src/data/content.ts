@@ -117,7 +117,7 @@ export const projects: ProjectItem[] = [
       "PostgreSQL",
       "TanStack Query",
     ],
-    link: "https://github.com/Bethlehem-Tesfaye/Automated-Expense-Tracker",
+    link: "https://automated-expense-tracker-app.onrender.com",
     githubLink:
       "https://github.com/Bethlehem-Tesfaye/Automated-Expense-Tracker",
   },
