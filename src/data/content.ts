@@ -37,6 +37,7 @@ export interface ProjectItem {
   title: string;
   description: string;
   link: string;
+  highlights?: string[];
   githubLink?: string;
   features?: string[];
 }
@@ -69,7 +70,7 @@ export const projects: ProjectItem[] = [
     imageAlt: "Eventlight",
     title: "Event Management App (Eventlight)",
     description:
-      "Full-stack event management platform featuring Better Auth authentication, real-time notifications with Socket.IO, and secure ticket payments via Chapa gateway.",
+      "Built a full-stack event management platform with secure ticketing, real-time updates, and a custom authentication flow designed for reliable user onboarding and payments.",
     features: [
       "Better Auth",
       "Socket.IO",
@@ -81,7 +82,13 @@ export const projects: ProjectItem[] = [
       "TanStack Query",
       "shadcn/ui",
     ],
-    link: "https://frontend-event-mangment-pr-64.onrender.com",
+    highlights: [
+      "Designed a custom authentication and recovery system using Better Auth with OTP verification and secure session creation",
+      "Handled payment workflows with Chapa, ensuring reliable transaction flow and user feedback on payment status",
+      "Implemented real-time event updates using Socket.IO to improve user engagement and system responsiveness",
+      "Modeled relational data using PostgreSQL and Prisma for efficient querying of events, tickets, and users",
+    ],
+    link: "https://frontend-event-mangment.onrender.com",
     githubLink: "https://github.com/Bethlehem-Tesfaye/Event-mangment",
   },
   {
@@ -90,7 +97,15 @@ export const projects: ProjectItem[] = [
     imageAlt: "Expense Tracker",
     title: "Automated Expense Tracker with Receipt OCR & Analytics",
     description:
-      "Full-stack expense tracking platform that automates receipt processing with OCR and uses an LLM (Gemini) to structure and categorize expense data, with analytics dashboards for spending insights.",
+      "Built an intelligent expense tracking system that transforms raw receipt data into structured financial insights using OCR and AI-driven processing.",
+
+    highlights: [
+      "Designed a multi-step OCR pipeline combining PaddleOCR and Veryfi to improve accuracy across diverse receipt formats",
+      "Integrated an LLM (Gemini) to extract, normalize, and categorize unstructured receipt data into structured records",
+      "Handled noisy and inconsistent OCR outputs to ensure reliable downstream processing",
+      "Built an end-to-end data flow from extraction → processing → storage → analytics",
+      "Developed analytics dashboards to visualize spending patterns and user insights",
+    ],
     features: [
       "OCR(PaddleOCR)",
       "Advanced OCR (Veryfi API)",
@@ -112,7 +127,7 @@ export const projects: ProjectItem[] = [
     imageAlt: "Blink Real-Time Messaging Platform",
     title: "Blink – Real-Time Messaging Platform",
     description:
-      "Blink is a scalable full-stack real-time messaging platform that enables instant group communication. The frontend is built with React and TypeScript, while the backend uses Node.js, Express, and Prisma with PostgreSQL for data persistence. Real-time messaging is powered by Socket.IO with Redis pub/sub for event distribution across servers. The platform includes secure authentication, media uploads via Cloudinary, and production deployment using Render and cloud services.",
+      "Designed and built a scalable real-time messaging system supporting group communication with consistent message delivery across distributed servers.",
     features: [
       "Socket.IO",
       "Redis",
@@ -121,6 +136,12 @@ export const projects: ProjectItem[] = [
       "Prisma ORM",
       "PostgreSQL ",
       "TypeScript",
+    ],
+    highlights: [
+      "Implemented Redis pub/sub to synchronize Socket.IO events across multiple server instances",
+      "Designed backend architecture for horizontal scalability and real-time reliability",
+      "Handled media uploads with optimized Cloudinary integration",
+      "Built secure authentication and session handling for real-time environments",
     ],
     link: "https://real-time-messaging-platform.onrender.com",
     githubLink:
@@ -132,7 +153,22 @@ export const projects: ProjectItem[] = [
     imageAlt: "MERN Auth",
     title: "Complete MERN Authentication System",
     description:
-      "A full-featured authentication system with OTP verification, password reset, and protected routes.",
+      "Built a full authentication system supporting OTP verification, password recovery, and protected routes with role-based access control.",
+
+    highlights: [
+      "Implemented OTP-based email verification for secure user onboarding",
+      "Designed password reset flow with token-based validation",
+      "Protected routes with authentication guards on both frontend and backend",
+    ],
+
+    features: [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "JWT Authentication",
+    ],
+
     link: "https://complete-mern-authentication-system-1.onrender.com",
     githubLink:
       "https://github.com/Bethlehem-Tesfaye/complete-mern-Authentication-system",
@@ -143,7 +179,16 @@ export const projects: ProjectItem[] = [
     imageAlt: "Restaurant App",
     title: "Restaurant Management App",
     description:
-      "Responsive restaurant web app for customers and admin management (PHP + MySQL).",
+      "Developed a responsive restaurant web application for menu browsing and administrative management using a PHP and MySQL backend.",
+
+    highlights: [
+      "Implemented admin features for managing menu items and orders",
+      "Designed a responsive UI for customer browsing and interaction",
+      "Integrated backend with MySQL for persistent data storage",
+    ],
+
+    features: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
+
     link: "https://phpresturnatwebapp.infinityfreeapp.com",
     githubLink: "https://github.com/Bethlehem-Tesfaye/resturant-app-php-mysql",
   },
@@ -154,7 +199,16 @@ export const projects: ProjectItem[] = [
     imageAlt: "Real Estate App",
     title: "Real Estate App",
     description:
-      "Property listings with detailed information and map-based exploration.",
+      "Built a property listing platform with detailed views and map-based exploration to help users browse and discover real estate listings.",
+
+    highlights: [
+      "Implemented property listing and detail pages with structured data display",
+      "Integrated map-based exploration for improved user navigation",
+      "Designed responsive UI for browsing listings across devices",
+    ],
+
+    features: ["React", "JavaScript", "CSS", "API Integration"],
+
     link: "https://real-estate-react.onrender.com",
     githubLink: "https://github.com/Bethlehem-Tesfaye/real-estate-react",
   },
@@ -266,7 +320,7 @@ export const contactMethods = [
     id: "telegram",
     title: "Telegram",
     subtitle: "Message me",
-    href: "https://t.me/yourhandle",
+    href: "https://t.me/TThenightmarepainter",
     type: "link",
   },
 ];

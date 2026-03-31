@@ -12,6 +12,7 @@ interface CardProps {
   githubLink?: string;
   ctaText?: string;
   features?: string[];
+  highlights?: string[];
 }
 
 export default function Card({
@@ -23,6 +24,7 @@ export default function Card({
   githubLink,
   ctaText = "View Project",
   features,
+  highlights,
 }: CardProps) {
   return (
     <motion.article
@@ -73,7 +75,28 @@ export default function Card({
           <p className="text-[var(--text-secondary)] leading-relaxed text-lg mb-6 flex-grow">
             {description}
           </p>
+          {highlights && highlights.length > 0 && (
+            <div className="mb-6 p-4 border border-[var(--accent)]/20 bg-[var(--accent)]/5 rounded-xl relative overflow-hidden">
+              {/* Accent bar */}
+              <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent)]" />
 
+              <h4 className="text-sm font-semibold tracking-wide text-[var(--accent)] mb-3">
+                Development Highlights
+              </h4>
+
+              <ul className="space-y-2">
+                {highlights.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-sm text-[var(--text-primary)]"
+                  >
+                    <span className="mt-1.5 w-1.5 h-1.5 bg-[var(--accent)] rounded-full shrink-0" />
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           {features && features.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
               {features.map((f) => (
