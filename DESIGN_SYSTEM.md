@@ -1,6 +1,6 @@
 # Design System
 
-This document outlines the design system for the alan-khalili.com website.
+This document outlines the design system for the bethlehem tesfaye's website.
 
 ## Colors
 
