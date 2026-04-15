@@ -1,4 +1,4 @@
-import { aau, auth, chat, event, expense, house, res, swen } from "../assets";
+import { aau, auth, chat, event, expense, swen } from "../assets";
 
 export const RESUME_LINK =
   "https://drive.google.com/file/d/13RcRMfZogPtFcJqAej3eFNwNiE46fGsP/view?usp=sharing";
@@ -40,6 +40,7 @@ export interface ProjectItem {
   highlights?: string[];
   githubLink?: string;
   features?: string[];
+  tryThis?: string[];
 }
 
 export const experiences: ExperienceItem[] = [
@@ -68,149 +69,117 @@ export const projects: ProjectItem[] = [
     id: "eventlight",
     imageSrc: event,
     imageAlt: "Eventlight",
-    title: "Event Management App (Eventlight)",
+    title: "Eventlight – Real-Time Event & Ticketing Platform",
     description:
-      "Built a full-stack event management platform with secure ticketing, real-time updates, and a custom authentication flow designed for reliable user onboarding and payments.",
+      "Users can create events, sell tickets, and receive real-time updates on purchases and activity.",
+
+    highlights: [
+      "Implemented secure authentication with OTP verification and account recovery",
+      "Integrated Chapa payments for seamless ticket purchasing",
+      "Enabled real-time updates using Socket.IO for live event activity",
+      "Designed backend with PostgreSQL and Prisma for efficient data handling",
+    ],
+
     features: [
-      "Better Auth",
-      "Socket.IO",
-      "Chapa gateway",
       "React",
       "TypeScript",
-      "node.js",
-      "PostgreSQL(prisma)",
-      "TanStack Query",
-      "shadcn/ui",
+      "Node.js",
+      "PostgreSQL",
+      "Socket.IO",
+      "Chapa",
+      "Prisma",
     ],
-    highlights: [
-      "Designed a custom authentication and recovery system using Better Auth with OTP verification and secure session creation",
-      "Handled payment workflows with Chapa, ensuring reliable transaction flow and user feedback on payment status",
-      "Implemented real-time event updates using Socket.IO to improve user engagement and system responsiveness",
-      "Modeled relational data using PostgreSQL and Prisma for efficient querying of events, tickets, and users",
-    ],
+
     link: "https://frontend-event-mangment.onrender.com",
     githubLink: "https://github.com/Bethlehem-Tesfaye/Event-mangment",
+
+    // NEW (important)
+    tryThis: [
+      "Create an account",
+      "Create or join an event",
+      "Purchase a ticket and observe real-time updates",
+    ],
   },
   {
     id: "expense-tracker",
     imageSrc: expense,
     imageAlt: "Expense Tracker",
-    title: "Automated Expense Tracker with Receipt OCR & Analytics",
+    title: "Expense Tracker – Receipt OCR & Smart Categorization",
     description:
-      "Built an intelligent expense tracking system that transforms raw receipt data into structured financial insights using OCR and AI-driven processing.",
+      "Upload a receipt and automatically extract, categorize, and visualize expenses.",
 
     highlights: [
-      "Designed a multi-step OCR pipeline combining PaddleOCR and Veryfi to improve accuracy across diverse receipt formats",
-      "Integrated an LLM (Gemini) to extract, normalize, and categorize unstructured receipt data into structured records",
-      "Handled noisy and inconsistent OCR outputs to ensure reliable downstream processing",
-      "Built an end-to-end data flow from extraction → processing → storage → analytics",
-      "Developed analytics dashboards to visualize spending patterns and user insights",
+      "Built OCR pipeline using PaddleOCR and Veryfi for receipt processing",
+      "Used Gemini AI to extract and structure expense data",
+      "Handled noisy OCR outputs to ensure reliable data processing",
+      "Developed analytics dashboard to visualize spending patterns",
     ],
+
     features: [
-      "OCR(PaddleOCR)",
-      "Advanced OCR (Veryfi API)",
-      "Gemini AI",
-      "Analytics Dashboard & Charts",
       "React",
       "TypeScript",
       "Node.js",
       "PostgreSQL",
-      "TanStack Query",
+      "OCR",
+      "Gemini AI",
     ],
+
     link: "https://automated-expense-tracker-app.onrender.com",
     githubLink:
       "https://github.com/Bethlehem-Tesfaye/Automated-Expense-Tracker",
+
+    tryThis: [
+      "Upload a receipt image",
+      "View extracted and categorized expenses",
+      "Check analytics dashboard",
+    ],
   },
   {
     id: "blink-chat-app",
     imageSrc: chat,
-    imageAlt: "Blink Real-Time Messaging Platform",
+    imageAlt: "Blink Messaging",
     title: "Blink – Real-Time Messaging Platform",
     description:
-      "Designed and built a scalable real-time messaging system supporting group communication with consistent message delivery across distributed servers.",
-    features: [
-      "Socket.IO",
-      "Redis",
-      "React",
-      "Node.js ",
-      "Prisma ORM",
-      "PostgreSQL ",
-      "TypeScript",
-    ],
+      "Chat in real-time with instant message delivery across multiple users and sessions.",
+
     highlights: [
-      "Implemented Redis pub/sub to synchronize Socket.IO events across multiple server instances",
-      "Designed backend architecture for horizontal scalability and real-time reliability",
-      "Handled media uploads with optimized Cloudinary integration",
-      "Built secure authentication and session handling for real-time environments",
+      "Implemented real-time messaging using Socket.IO",
+      "Used Redis pub/sub for cross-server message synchronization",
+      "Handled media uploads with Cloudinary",
+      "Built secure authentication for real-time communication",
     ],
+
+    features: ["React", "Node.js", "Socket.IO", "Redis", "PostgreSQL"],
+
     link: "https://real-time-messaging-platform.onrender.com",
     githubLink:
       "https://github.com/Bethlehem-Tesfaye/Real-Time-Messaging-Platform",
+
+    tryThis: [
+      "Open app in two tabs",
+      "Send messages between users",
+      "Test real-time updates",
+    ],
   },
   {
     id: "complete-mern-auth",
     imageSrc: auth,
     imageAlt: "MERN Auth",
-    title: "Complete MERN Authentication System",
+    title: "MERN Authentication System",
     description:
-      "Built a full authentication system supporting OTP verification, password recovery, and protected routes with role-based access control.",
+      "Secure authentication system with OTP verification and password recovery.",
 
     highlights: [
-      "Implemented OTP-based email verification for secure user onboarding",
-      "Designed password reset flow with token-based validation",
-      "Protected routes with authentication guards on both frontend and backend",
+      "Implemented OTP-based email verification",
+      "Built password reset flow with token validation",
+      "Protected frontend and backend routes",
     ],
 
-    features: [
-      "MongoDB",
-      "Express.js",
-      "React",
-      "Node.js",
-      "JWT Authentication",
-    ],
+    features: ["MongoDB", "Express", "React", "Node.js", "JWT"],
 
     link: "https://complete-mern-authentication-system-1.onrender.com",
     githubLink:
       "https://github.com/Bethlehem-Tesfaye/complete-mern-Authentication-system",
-  },
-  {
-    id: "restaurant-app",
-    imageSrc: res,
-    imageAlt: "Restaurant App",
-    title: "Restaurant Management App",
-    description:
-      "Developed a responsive restaurant web application for menu browsing and administrative management using a PHP and MySQL backend.",
-
-    highlights: [
-      "Implemented admin features for managing menu items and orders",
-      "Designed a responsive UI for customer browsing and interaction",
-      "Integrated backend with MySQL for persistent data storage",
-    ],
-
-    features: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-
-    link: "https://phpresturnatwebapp.infinityfreeapp.com",
-    githubLink: "https://github.com/Bethlehem-Tesfaye/resturant-app-php-mysql",
-  },
-
-  {
-    id: "real-estate",
-    imageSrc: house,
-    imageAlt: "Real Estate App",
-    title: "Real Estate App",
-    description:
-      "Built a property listing platform with detailed views and map-based exploration to help users browse and discover real estate listings.",
-
-    highlights: [
-      "Implemented property listing and detail pages with structured data display",
-      "Integrated map-based exploration for improved user navigation",
-      "Designed responsive UI for browsing listings across devices",
-    ],
-
-    features: ["React", "JavaScript", "CSS", "API Integration"],
-
-    link: "https://real-estate-react.onrender.com",
-    githubLink: "https://github.com/Bethlehem-Tesfaye/real-estate-react",
   },
 ];
 

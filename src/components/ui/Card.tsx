@@ -13,6 +13,7 @@ interface CardProps {
   ctaText?: string;
   features?: string[];
   highlights?: string[];
+  tryThis?: string[]; // ✅ NEW
 }
 
 export default function Card({
@@ -25,6 +26,7 @@ export default function Card({
   ctaText = "View Project",
   features,
   highlights,
+  tryThis, // ✅ NEW
 }: CardProps) {
   return (
     <motion.article
@@ -43,9 +45,9 @@ export default function Card({
               alt={imageAlt}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            {/* Subtle gradient overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
+
           {/* Corner accent */}
           <div className="absolute -top-1 -right-1 w-6 h-6">
             <div className="absolute top-0 right-0 w-full h-[2px] bg-[var(--accent)] origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
@@ -53,12 +55,13 @@ export default function Card({
           </div>
         </div>
 
-        {/* Content Container */}
+        {/* Content */}
         <div className="flex flex-col h-full py-2">
           <div className="flex items-start justify-between gap-4 mb-4">
             <h3 className="font-display text-3xl md:text-4xl tracking-tight text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors duration-300">
               {title}
             </h3>
+
             {githubLink && (
               <a
                 href={githubLink}
@@ -75,9 +78,10 @@ export default function Card({
           <p className="text-[var(--text-secondary)] leading-relaxed text-lg mb-6 flex-grow">
             {description}
           </p>
+
+          {/* Highlights */}
           {highlights && highlights.length > 0 && (
             <div className="mb-6 p-4 border border-[var(--accent)]/20 bg-[var(--accent)]/5 rounded-xl relative overflow-hidden">
-              {/* Accent bar */}
               <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent)]" />
 
               <h4 className="text-sm font-semibold tracking-wide text-[var(--accent)] mb-3">
@@ -97,6 +101,31 @@ export default function Card({
               </ul>
             </div>
           )}
+
+          {/* ✅ Try This (NEW) */}
+          {tryThis && tryThis.length > 0 && (
+            <div className="mb-6 p-4 border border-[var(--border)]/20 bg-[var(--surface)] rounded-xl relative overflow-hidden">
+              <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent)]/70" />
+
+              <h4 className="text-sm font-semibold tracking-wide text-[var(--text-primary)] mb-3">
+                What you can try
+              </h4>
+
+              <ul className="space-y-2">
+                {tryThis.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-sm text-[var(--text-secondary)]"
+                  >
+                    <span className="mt-1.5 w-1.5 h-1.5 bg-[var(--accent)] rounded-full shrink-0" />
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Features */}
           {features && features.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
               {features.map((f) => (
@@ -110,6 +139,7 @@ export default function Card({
             </div>
           )}
 
+          {/* CTA */}
           <div className="flex items-center gap-6 pt-4 border-t border-[var(--border)]/10">
             <a
               href={link}
@@ -124,7 +154,7 @@ export default function Card({
         </div>
       </div>
 
-      {/* Decorative line */}
+      {/* Bottom line */}
       <div className="absolute -bottom-6 left-0 right-0 h-[1px] bg-gradient-to-r from-[var(--border)]/20 via-[var(--border)]/5 to-transparent" />
     </motion.article>
   );
