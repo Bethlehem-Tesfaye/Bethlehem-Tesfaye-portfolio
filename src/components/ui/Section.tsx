@@ -28,7 +28,11 @@ interface SectionHeaderProps {
   className?: string;
 }
 
-export function SectionHeader({ title, subtitle, className = "" }: SectionHeaderProps) {
+export function SectionHeader({
+  title,
+  subtitle,
+  className = "",
+}: SectionHeaderProps) {
   return (
     <div className={`mb-16 ${className}`}>
       <div className="flex items-center gap-4 mb-6">
@@ -54,4 +58,3 @@ export function SectionHeader({ title, subtitle, className = "" }: SectionHeader
     </div>
   );
 }
-

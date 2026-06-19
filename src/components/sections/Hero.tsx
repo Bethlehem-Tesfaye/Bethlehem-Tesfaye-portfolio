@@ -34,7 +34,7 @@ export default function Hero() {
 
       {/* Floating Shapes */}
       <motion.div
-        className="absolute top-1/4 right-[15%] w-32 h-32 border-2 border-[var(--accent)] opacity-20 rotate-12"
+        className="absolute top-1/4 right-[15%] w-32 h-32 border-2 border-[var(--text-primary)] opacity-20 rotate-12"
         animate={{
           rotate: [12, 24, 12],
           y: [0, -20, 0],
@@ -46,7 +46,7 @@ export default function Hero() {
         }}
       />
       <motion.div
-        className="absolute bottom-1/3 left-[10%] w-24 h-24 bg-[var(--accent-muted)] opacity-10 rounded-full blur-xl"
+        className="absolute bottom-1/3 left-[10%] w-24 h-24 bg-[var(--text-secondary)] opacity-10 rounded-full blur-xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.1, 0.15, 0.1],
@@ -70,7 +70,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-8"
         >
-          <span className="font-mono text-sm tracking-[0.3em] uppercase text-[var(--accent)] border border-[var(--accent)] px-4 py-2">
+          <span className="font-mono text-sm tracking-[0.3em] uppercase text-[var(--text-primary)] border border-[var(--text-primary)] px-4 py-2">
             Software Engineer
           </span>
         </motion.div>
@@ -216,7 +216,7 @@ export default function Hero() {
           className="relative"
         >
           {/* Coffee cup ASCII art */}
-          <pre className="font-mono text-[var(--accent-muted)] text-xs leading-tight opacity-40 select-none">
+          <pre className="font-mono text-[var(--text-secondary)] text-xs leading-tight opacity-40 select-none">
             {`
     ( (
      ) )

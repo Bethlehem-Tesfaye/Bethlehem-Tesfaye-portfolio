@@ -32,7 +32,7 @@ export default function Contact() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
-      className="px-6 lg:px-24 xl:px-36 py-32 bg-[var(--bg-secondary)] relative overflow-hidden"
+      className="px-6 lg:px-24 xl:px-36 py-32 bg-[var(--bg-primary)] relative overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.02] pointer-events-none">
         <div
@@ -57,10 +57,10 @@ export default function Contact() {
           {contactMethods.map((c) => (
             <div
               key={c.id}
-              className="p-6 rounded-2xl border-2 border-[var(--border)]/10 bg-[var(--bg-primary)] flex flex-col gap-4 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="p-6 rounded-2xl border-2 border-[var(--border)]/10 bg-[var(--bg-primary)] flex flex-col gap-4 hover:shadow-[6px_6px_0px_0px_var(--text-primary)] transition-all"
             >
               <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center text-[var(--accent)]">
+                <div className="w-12 h-12 rounded-lg border border-[var(--border)]/15 bg-[var(--text-primary)]/5 flex items-center justify-center text-[var(--text-primary)]">
                   {c.type === "phone" ? (
                     <HiOutlinePhone className="w-6 h-6" />
                   ) : c.type === "email" ? (

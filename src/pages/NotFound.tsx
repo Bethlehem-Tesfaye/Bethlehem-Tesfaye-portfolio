@@ -6,23 +6,23 @@ import { RoughNotation } from "react-rough-notation";
  */
 export default function NotFound() {
   return (
-    <div className="px-8 lg:px-36 flex justify-center  text-center flex-col items-center min-h-screen">
+    <div className="px-8 lg:px-36 flex justify-center text-center flex-col items-center min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
       <h1 className="text-6xl leading-snug font-bold pb-4">
         <RoughNotation
           type="underline"
           show={true}
           animationDelay={500}
-          color="var(--color-custom-ivory)"
+          color="var(--accent)"
           strokeWidth={3}
           multiline={true}
         >
           404 - Not Found
         </RoughNotation>
       </h1>
-      <p className="text-xl leading-loose">
+      <p className="text-xl leading-loose text-[var(--text-secondary)]">
         Sorry, the page you are looking for does not exist.
       </p>
-      <Link to="/" className="underline mt-4">
+      <Link to="/" className="underline mt-4 text-[var(--text-primary)] hover:text-[var(--accent)] transition-colors">
         Go back to the homepage
       </Link>
     </div>

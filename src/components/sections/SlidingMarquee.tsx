@@ -21,7 +21,7 @@ export default function SlidingMarquee() {
       className="relative py-8 bg-[var(--bg-secondary)] overflow-hidden"
     >
       {/* Top border accent */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--text-primary)]/20 to-transparent" />
 
       {/* Marquee with gradient masks showing languages */}
       <div className="relative mask-marquee">
@@ -31,7 +31,7 @@ export default function SlidingMarquee() {
               <span className="font-display text-2xl tracking-wide text-[var(--text-primary)]">
                 {lang}
               </span>
-              <span className="mx-8 text-[var(--accent-muted)] opacity-40">
+              <span className="mx-8 text-[var(--text-secondary)] opacity-40">
                 /
               </span>
             </div>
@@ -40,7 +40,7 @@ export default function SlidingMarquee() {
       </div>
 
       {/* Bottom border accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--accent)]/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[var(--text-primary)]/20 to-transparent" />
     </motion.div>
   );
 }

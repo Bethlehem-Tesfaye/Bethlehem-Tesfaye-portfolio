@@ -32,7 +32,7 @@ export default function Skills() {
               />
               <h3
                 className="text-xs font-mono uppercase tracking-[0.2em]"
-                style={{ color: "var(--accent)" }}
+                style={{ color: "var(--text-primary)" }}
               >
                 {cat.title}
               </h3>

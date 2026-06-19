@@ -6,17 +6,23 @@
   --font-serif: "Libre Baskerville", Georgia, serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Core Palette - Espresso & Cream with Electric Pop */
-  --color-espresso: #1a1410;
-  --color-cream: #f5f0e8;
-  --color-caramel: #c4956a;
-  --color-burnt: #8b4513;
-  --color-electric: #ff6b35;
-  --color-sage: #4a5d4a;
+  /* Core Palette - Monochrome with Orange Accent */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-orange: #ff6b35;
+
+  /* Legacy aliases */
+  --color-espresso: var(--color-black);
+  --color-cream: var(--color-white);
+  --color-caramel: color-mix(in srgb, var(--color-black) 35%, var(--color-white));
+  --color-burnt: var(--color-black);
+  --color-electric: var(--color-orange);
+  --color-sage: color-mix(in srgb, var(--color-black) 50%, var(--color-white));
 
   /* Utility Colors */
-  --color-custom-red: #dc2626;
-  --color-custom-green: #16a34a;
+  --color-custom-red: var(--color-black);
+  --color-custom-green: color-mix(in srgb, var(--color-black) 50%, var(--color-white));
+  --color-custom-ivory: var(--color-white);
 }
 
 :root {
@@ -24,14 +30,15 @@
   scroll-padding-top: 80px;
 
   /* Light Mode Variables */
-  --bg-primary: var(--color-cream);
-  --bg-secondary: #ebe5db;
-  --text-primary: var(--color-espresso);
-  --text-secondary: #3d3429;
-  --accent: var(--color-electric);
-  --accent-muted: var(--color-caramel);
-  --border: var(--color-espresso);
-  --surface: #ffffff;
+  --bg: var(--bg-primary);
+  --bg-primary: var(--color-white);
+  --bg-secondary: color-mix(in srgb, var(--color-black) 4%, var(--color-white));
+  --text-primary: var(--color-black);
+  --text-secondary: color-mix(in srgb, var(--color-black) 50%, var(--color-white));
+  --accent: var(--color-orange);
+  --accent-muted: color-mix(in srgb, var(--color-black) 35%, var(--color-white));
+  --border: var(--color-black);
+  --surface: var(--color-white);
 
   @apply bg-[var(--bg-primary)] text-[var(--text-primary)] font-serif antialiased;
 
@@ -41,14 +48,14 @@
 
 /* Dark Mode */
 :root.dark {
-  --bg-primary: #0d0b09;
-  --bg-secondary: #1a1612;
-  --text-primary: #f5f0e8;
-  --text-secondary: #c4b8a8;
-  --accent: #ff8c5a;
-  --accent-muted: #d4a574;
-  --border: #f5f0e8;
-  --surface: #1a1612;
+  --bg-primary: var(--color-black);
+  --bg-secondary: color-mix(in srgb, var(--color-white) 6%, var(--color-black));
+  --text-primary: var(--color-white);
+  --text-secondary: color-mix(in srgb, var(--color-white) 55%, var(--color-black));
+  --accent: var(--color-orange);
+  --accent-muted: color-mix(in srgb, var(--color-white) 35%, var(--color-black));
+  --border: var(--color-white);
+  --surface: var(--color-black);
 }
 
 /* Selection */
@@ -77,7 +84,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-muted);
+  background: var(--text-secondary);
   border-radius: 4px;
 }
 
@@ -204,10 +211,10 @@
 /* Animated border gradient */
 @keyframes borderGlow {
   0%, 100% {
-    border-color: var(--accent);
+    border-color: var(--text-primary);
   }
   50% {
-    border-color: var(--accent-muted);
+    border-color: var(--accent);
   }
 }
 

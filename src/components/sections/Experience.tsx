@@ -10,7 +10,7 @@ export default function Experience() {
 
       <div className="relative">
         {/* vertical line */}
-        <div className="absolute left-0 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[var(--accent)] via-[var(--border)]/30 to-transparent" />
+        <div className="absolute left-0 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[var(--text-primary)] via-[var(--border)]/30 to-transparent" />
 
         <div className="flex flex-col gap-10 pl-8">
           {experiences.map((exp, i) => (
@@ -27,7 +27,7 @@ export default function Experience() {
               className="relative group"
             >
               {/* dot on the line */}
-              <span className="absolute -left-[2.15rem] top-1.5 w-3 h-3 rounded-full border-2 border-[var(--accent)] bg-[var(--bg)] group-hover:bg-[var(--accent)] transition-colors duration-300" />
+              <span className="absolute -left-[2.15rem] top-1.5 w-3 h-3 rounded-full border-2 border-[var(--text-primary)] bg-[var(--bg)] group-hover:bg-[var(--accent)] group-hover:border-[var(--accent)] transition-colors duration-300" />
 
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
                 <h3 className="font-display text-xl md:text-2xl tracking-tight text-[var(--text-primary)] group-hover:text-[var(--accent)] transition-colors duration-300">

@@ -47,7 +47,7 @@ export default function Projects() {
               className="relative group flex items-center gap-8 py-16 px-4 -mx-4 border-t border-[var(--border)]/10 transition-all duration-300"
               style={{
                 backgroundColor: isHovered
-                  ? "color-mix(in srgb, var(--accent) 5%, transparent)"
+                  ? "color-mix(in srgb, var(--text-primary) 5%, transparent)"
                   : "transparent",
               }}
             >
@@ -89,8 +89,8 @@ export default function Projects() {
                     <span
                       className="text-[9px] font-mono uppercase tracking-widest px-2 py-0.5 border"
                       style={{
-                        color: "var(--accent)",
-                        borderColor: "var(--accent)",
+                        color: "var(--text-primary)",
+                        borderColor: "var(--text-primary)",
                         opacity: 0.7,
                       }}
                     >
@@ -123,8 +123,8 @@ export default function Projects() {
                         key={f}
                         className="text-[11px] px-2.5 py-1 font-mono leading-none transition-all duration-300"
                         style={{
-                          border: `1px solid ${isHovered ? "var(--accent)" : "color-mix(in srgb, var(--accent) 30%, transparent)"}`,
-                          color: "var(--accent)",
+                          border: `1px solid ${isHovered ? "var(--accent)" : "color-mix(in srgb, var(--border) 25%, transparent)"}`,
+                          color: isHovered ? "var(--accent)" : "var(--text-primary)",
                           backgroundColor: isHovered
                             ? "color-mix(in srgb, var(--accent) 8%, transparent)"
                             : "transparent",
@@ -176,8 +176,8 @@ export default function Projects() {
                 onClick={() => setSelected(project)}
                 className="shrink-0 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest transition-all duration-200 px-5 py-2.5"
                 style={{
-                  border: `1px solid ${isHovered ? "var(--accent)" : "color-mix(in srgb, var(--accent) 40%, transparent)"}`,
-                  color: isHovered ? "white" : "var(--accent)",
+                  border: `1px solid ${isHovered ? "var(--accent)" : "color-mix(in srgb, var(--border) 30%, transparent)"}`,
+                  color: isHovered ? "var(--bg-primary)" : "var(--text-primary)",
                   backgroundColor: isHovered ? "var(--accent)" : "transparent",
                 }}
               >
@@ -242,9 +242,9 @@ export default function Projects() {
                 onClick={() => setSelected(null)}
                 className="absolute top-4 right-4 w-8 h-8 border flex items-center justify-center transition-colors"
                 style={{
-                  backgroundColor: "var(--accent)",
-                  borderColor: "var(--accent)",
-                  color: "white",
+                  backgroundColor: "var(--text-primary)",
+                  borderColor: "var(--text-primary)",
+                  color: "var(--bg-primary)",
                 }}
                 aria-label="Close"
               >
@@ -267,8 +267,8 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="shrink-0 w-9 h-9 border flex items-center justify-center transition-all"
                     style={{
-                      borderColor: "var(--accent)",
-                      color: "var(--accent)",
+                      borderColor: "color-mix(in srgb, var(--border) 30%, transparent)",
+                      color: "var(--text-primary)",
                     }}
                     aria-label="GitHub"
                   >
@@ -289,9 +289,8 @@ export default function Projects() {
                   className="p-4 border relative"
                   style={{
                     borderColor:
-                      "color-mix(in srgb, var(--accent) 20%, transparent)",
-                    backgroundColor:
-                      "color-mix(in srgb, var(--accent) 5%, transparent)",
+                      "color-mix(in srgb, var(--border) 20%, transparent)",
+                    backgroundColor: "var(--surface)",
                   }}
                 >
                   <div
@@ -300,7 +299,7 @@ export default function Projects() {
                   />
                   <h4
                     className="text-xs font-semibold tracking-widest uppercase mb-3"
-                    style={{ color: "var(--accent)" }}
+                    style={{ color: "var(--text-primary)" }}
                   >
                     Development highlights
                   </h4>
@@ -313,7 +312,7 @@ export default function Projects() {
                       >
                         <span
                           className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                          style={{ backgroundColor: "var(--accent)" }}
+                          style={{ backgroundColor: "var(--text-primary)" }}
                         />
                         <span className="leading-relaxed">{item}</span>
                       </li>
@@ -335,7 +334,7 @@ export default function Projects() {
                     className="absolute left-0 top-0 h-full w-[3px]"
                     style={{
                       backgroundColor:
-                        "color-mix(in srgb, var(--accent) 50%, transparent)",
+                        "color-mix(in srgb, var(--text-primary) 50%, transparent)",
                     }}
                   />
                   <h4
@@ -355,7 +354,7 @@ export default function Projects() {
                           className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
                           style={{
                             backgroundColor:
-                              "color-mix(in srgb, var(--accent) 60%, transparent)",
+                              "color-mix(in srgb, var(--text-primary) 60%, transparent)",
                           }}
                         />
                         <span className="leading-relaxed">{item}</span>
@@ -372,10 +371,10 @@ export default function Projects() {
                       key={f}
                       className="text-xs px-3 py-1 font-medium"
                       style={{
-                        border: "2px solid var(--accent)",
+                        border: "2px solid color-mix(in srgb, var(--border) 30%, transparent)",
                         backgroundColor:
-                          "color-mix(in srgb, var(--accent) 10%, transparent)",
-                        color: "var(--accent)",
+                          "color-mix(in srgb, var(--text-primary) 5%, transparent)",
+                        color: "var(--text-primary)",
                       }}
                     >
                       {f}

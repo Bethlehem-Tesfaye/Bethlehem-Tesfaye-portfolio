@@ -27,17 +27,17 @@ export default function Music() {
                     <motion.span
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 0.6, repeat: Infinity, delay: 0 }}
-                      className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"
+                      className="w-1.5 h-1.5 bg-[var(--text-primary)] rounded-full"
                     />
                     <motion.span
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }}
-                      className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"
+                      className="w-1.5 h-1.5 bg-[var(--text-primary)] rounded-full"
                     />
                     <motion.span
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }}
-                      className="w-1.5 h-1.5 bg-[var(--accent)] rounded-full"
+                      className="w-1.5 h-1.5 bg-[var(--text-primary)] rounded-full"
                     />
                   </div>
                   <span className="font-mono text-xs uppercase tracking-[0.2em] text-[var(--text-secondary)]">

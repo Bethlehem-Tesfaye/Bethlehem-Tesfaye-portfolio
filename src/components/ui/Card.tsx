@@ -45,13 +45,13 @@ export default function Card({
               alt={imageAlt}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[var(--text-primary)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
 
           {/* Corner accent */}
           <div className="absolute -top-1 -right-1 w-6 h-6">
-            <div className="absolute top-0 right-0 w-full h-[2px] bg-[var(--accent)] origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-            <div className="absolute top-0 right-0 w-[2px] h-full bg-[var(--accent)] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-300 delay-100" />
+            <div className="absolute top-0 right-0 w-full h-[2px] bg-[var(--text-primary)] origin-right scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+            <div className="absolute top-0 right-0 w-[2px] h-full bg-[var(--text-primary)] origin-top scale-y-0 group-hover:scale-y-100 transition-transform duration-300 delay-100" />
           </div>
         </div>
 
@@ -81,10 +81,10 @@ export default function Card({
 
           {/* Highlights */}
           {highlights && highlights.length > 0 && (
-            <div className="mb-6 p-4 border border-[var(--accent)]/20 bg-[var(--accent)]/5 rounded-xl relative overflow-hidden">
+            <div className="mb-6 p-4 border border-[var(--border)]/20 bg-[var(--surface)] rounded-xl relative overflow-hidden">
               <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent)]" />
 
-              <h4 className="text-sm font-semibold tracking-wide text-[var(--accent)] mb-3">
+              <h4 className="text-sm font-semibold tracking-wide text-[var(--text-primary)] mb-3">
                 Development Highlights
               </h4>
 
@@ -94,7 +94,7 @@ export default function Card({
                     key={index}
                     className="flex items-start gap-3 text-sm text-[var(--text-primary)]"
                   >
-                    <span className="mt-1.5 w-1.5 h-1.5 bg-[var(--accent)] rounded-full shrink-0" />
+                    <span className="mt-1.5 w-1.5 h-1.5 bg-[var(--text-primary)] rounded-full shrink-0" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -105,7 +105,7 @@ export default function Card({
           {/* ✅ Try This (NEW) */}
           {tryThis && tryThis.length > 0 && (
             <div className="mb-6 p-4 border border-[var(--border)]/20 bg-[var(--surface)] rounded-xl relative overflow-hidden">
-              <div className="absolute left-0 top-0 h-full w-1 bg-[var(--accent)]/70" />
+              <div className="absolute left-0 top-0 h-full w-1 bg-[var(--text-primary)]/70" />
 
               <h4 className="text-sm font-semibold tracking-wide text-[var(--text-primary)] mb-3">
                 What you can try
@@ -117,7 +117,7 @@ export default function Card({
                     key={index}
                     className="flex items-start gap-3 text-sm text-[var(--text-secondary)]"
                   >
-                    <span className="mt-1.5 w-1.5 h-1.5 bg-[var(--accent)] rounded-full shrink-0" />
+                    <span className="mt-1.5 w-1.5 h-1.5 bg-[var(--text-primary)] rounded-full shrink-0" />
                     <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
@@ -131,7 +131,7 @@ export default function Card({
               {features.map((f) => (
                 <span
                   key={f}
-                  className="text-xs px-3 py-1 border-2 border-[var(--accent)] bg-[var(--accent)]/10 text-[var(--accent)] rounded-md font-medium"
+                  className="text-xs px-3 py-1 border-2 border-[var(--border)]/30 bg-[var(--text-primary)]/5 text-[var(--text-primary)] rounded-md font-medium"
                 >
                   {f}
                 </span>
