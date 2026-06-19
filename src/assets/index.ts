@@ -7,5 +7,6 @@ import expense from "./expense2.png";
 import res from "./resapp.png";
 import house from "./house.png";
 import chat from "./chat.png";
+import roommatch from "./roommatch.jpg";
 
-export { swen, aau, event, auth, book, expense, res, house, chat };
+export { swen, aau, event, auth, book, expense, res, house, chat, roommatch };
