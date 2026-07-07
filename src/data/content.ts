@@ -1,7 +1,7 @@
 import { aau, chat, event, expense, swen, roommatch } from "../assets";
 
 export const RESUME_LINK =
-  "https://drive.google.com/file/d/13RcRMfZogPtFcJqAej3eFNwNiE46fGsP/view?usp=sharing";
+  "https://drive.google.com/file/d/1STqUL7oeOKNTpxk-LZHogr1WbsxtdNf_/view?usp=sharing";
 
 export const heroContent = {
   greeting: "Hi, my name is",
@@ -9,7 +9,7 @@ export const heroContent = {
   emoji: "👋",
   // ✅ FIXED: More specific, backend-forward, and honest to what you actually build
   intro:
-    "Full-Stack & Backend Developer building efficient web applications and solving complex problems with clean code.",
+    "Full-Stack Developer building efficient web applications and solving complex problems with clean code.",
   // highlight: ",
   callToAction: "Have a project or opportunity?",
   linkText: "Get In Touch",
@@ -51,8 +51,8 @@ export const experiences: ExperienceItem[] = [
     imageAlt: "Swenetix",
     title: "Intern (Fullstack Dev) @ Swenetix Tech",
     // ✅ FIXED: Actually says what you built and with what stack
-    description:
-      "Contributed to a Payroll Management System built for ERP integration. Worked across frontend and backend during the internship.",
+    description: `Built and maintained modules for a high-scale Payroll Management System integrated into an ERP platform.
+        Worked full-stack: Node.js/Express backend logic and responsive React/TypeScript UI components. Implemented Redis caching for frequently accessed payroll data, improving data retrieval speed and search performance`,
     link: "https://swenetix.com/",
   },
   {
@@ -100,16 +100,17 @@ export const projects: ProjectItem[] = [
   },
   {
     id: "roommatch",
-    imageSrc: roommatch, // add your screenshot import to assets
+    imageSrc: roommatch,
     imageAlt: "RoomMatch",
     title: "RoomMatch – Housing & Roommate Matching Platform",
     description:
-      "A full-stack housing platform where tenants find rentals, pay rent online, and get matched with compatible roommates — all in one place.",
+      "A full-stack housing platform where tenants browse rentals, pay rent online, and get matched with compatible roommates through a weighted compatibility engine.",
 
     highlights: [
       "Built a weighted roommate compatibility engine scoring lifestyle, budget, sleep schedule, and preferences",
       "Integrated Chapa for online rent collection with subaccount support for property owners",
       "Implemented full rental lifecycle management — request, contract, active, termination, and receipt download",
+      "Added ID verification for rental requests, letting owners confirm tenant identity securely before approval",
       "Delivered real-time notifications and in-app messaging using Socket.IO",
       "Built a separate admin panel for user moderation, scam reports, and platform oversight",
     ],
@@ -138,7 +139,7 @@ export const projects: ProjectItem[] = [
     id: "expense-tracker",
     imageSrc: expense,
     imageAlt: "Expense Tracker",
-    title: "Receipt OCR & Smart Categorization",
+    title: "ReceiptIQ — AI-Powered Receipt Intelligence & Spend Analytics",
     description:
       "Upload a receipt and automatically extract, categorize, and visualize expenses.",
     highlights: [
@@ -211,8 +212,6 @@ export const skills: SkillCategory[] = [
       "Event-driven architecture",
       "Authentication / JWT",
       "Zod (schema validation)",
-      "PHP",
-      ".NET",
     ],
   },
   {
@@ -235,8 +234,6 @@ export const skills: SkillCategory[] = [
     items: [
       "PostgreSQL",
       "MongoDB (NoSQL)",
-      "MySQL",
-      "SQLite",
       // ✅ ADDED: Prisma is in every project, should be in skills too
       "Prisma ORM",
     ],
@@ -257,6 +254,11 @@ export const skills: SkillCategory[] = [
     id: "tools",
     title: "DevOps & Tools",
     items: ["Git", "GitHub", "Docker", "Postman", "Figma"],
+  },
+  {
+    id: "also-familiar",
+    title: "Also Familiar With",
+    items: ["PHP", ".NET", "MySQL", "SQLite"],
   },
 ];
 

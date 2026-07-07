@@ -23,7 +23,7 @@ export default function Projects() {
   }, [selected]);
 
   return (
-    <Section id="Projects" className="pb-32">
+    <Section id="Projects" className="pb-20 sm:pb-32">
       <SectionHeader title="Projects" subtitle="Things I've built" />
 
       <div className="flex flex-col">
@@ -44,7 +44,7 @@ export default function Projects() {
               viewport={{ once: true, margin: "-40px" }}
               onMouseEnter={() => setHoveredId(project.id)}
               onMouseLeave={() => setHoveredId(null)}
-              className="relative group flex items-center gap-8 py-16 px-4 -mx-4 border-t border-[var(--border)]/10 transition-all duration-300"
+              className="relative group flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8 py-10 sm:py-16 px-4 -mx-4 border-t border-[var(--border)]/10 transition-all duration-300"
               style={{
                 backgroundColor: isHovered
                   ? "color-mix(in srgb, var(--text-primary) 5%, transparent)"
@@ -53,7 +53,7 @@ export default function Projects() {
             >
               {/* row number */}
               <span
-                className="absolute top-16 left-4 font-mono text-[11px] tracking-widest transition-colors duration-300"
+                className="absolute top-4 left-4 sm:top-16 font-mono text-[11px] tracking-widest transition-colors duration-300"
                 style={{
                   color: isHovered ? "var(--accent)" : "var(--text-secondary)",
                   opacity: isHovered ? 1 : 0.4,
@@ -64,14 +64,15 @@ export default function Projects() {
 
               {/* thumbnail */}
               <div
-                className="shrink-0 overflow-hidden border transition-all duration-500"
+                className={`w-full sm:shrink-0 overflow-hidden border transition-all duration-500 mt-6 sm:mt-0 sm:ml-8 ${
+                  isFeatured
+                    ? "h-48 sm:h-[148px] sm:w-[220px]"
+                    : "h-40 sm:h-[120px] sm:w-[180px]"
+                }`}
                 style={{
-                  width: isFeatured ? "220px" : "180px",
-                  height: isFeatured ? "148px" : "120px",
                   borderColor: isHovered
                     ? "var(--accent)"
                     : "color-mix(in srgb, var(--border) 15%, transparent)",
-                  marginLeft: "2rem",
                 }}
               >
                 <img
@@ -100,7 +101,7 @@ export default function Projects() {
                 </div>
 
                 <h3
-                  className="font-display text-2xl md:text-3xl tracking-tight leading-snug mb-2 transition-colors duration-300"
+                  className="font-display text-xl sm:text-2xl md:text-3xl tracking-tight leading-snug mb-2 transition-colors duration-300"
                   style={{
                     color: isHovered ? "var(--accent)" : "var(--text-primary)",
                   }}
@@ -124,7 +125,9 @@ export default function Projects() {
                         className="text-[11px] px-2.5 py-1 font-mono leading-none transition-all duration-300"
                         style={{
                           border: `1px solid ${isHovered ? "var(--accent)" : "color-mix(in srgb, var(--border) 25%, transparent)"}`,
-                          color: isHovered ? "var(--accent)" : "var(--text-primary)",
+                          color: isHovered
+                            ? "var(--accent)"
+                            : "var(--text-primary)",
                           backgroundColor: isHovered
                             ? "color-mix(in srgb, var(--accent) 8%, transparent)"
                             : "transparent",
@@ -174,10 +177,12 @@ export default function Projects() {
               {/* details button */}
               <button
                 onClick={() => setSelected(project)}
-                className="shrink-0 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest transition-all duration-200 px-5 py-2.5"
+                className="w-full sm:w-auto justify-center shrink-0 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest transition-all duration-200 px-5 py-2.5"
                 style={{
                   border: `1px solid ${isHovered ? "var(--accent)" : "color-mix(in srgb, var(--border) 30%, transparent)"}`,
-                  color: isHovered ? "var(--bg-primary)" : "var(--text-primary)",
+                  color: isHovered
+                    ? "var(--bg-primary)"
+                    : "var(--text-primary)",
                   backgroundColor: isHovered ? "var(--accent)" : "transparent",
                 }}
               >
@@ -215,8 +220,7 @@ export default function Projects() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.35, ease: [0.33, 1, 0.68, 1] }}
-            // style={{ boxShadow: "-8px 0 32px rgba(0,0,0,0.15)" }}
-            className="fixed top-0 right-0 h-full w-[600px] max-w-[90vw] z-50 overflow-y-auto flex flex-col border-l"
+            className="fixed top-0 right-0 h-full w-full sm:w-[600px] sm:max-w-[90vw] z-50 overflow-y-auto flex flex-col border-l"
             style={{
               boxShadow: "-8px 0 32px rgba(0,0,0,0.15)",
               backgroundColor: "var(--bg)",
@@ -252,10 +256,10 @@ export default function Projects() {
               </button>
             </div>
 
-            <div className="flex flex-col gap-6 p-6 flex-1">
+            <div className="flex flex-col gap-6 p-5 sm:p-6 flex-1">
               <div className="flex items-start justify-between gap-4">
                 <h2
-                  className="font-display text-2xl md:text-3xl tracking-tight leading-tight"
+                  className="font-display text-xl sm:text-2xl md:text-3xl tracking-tight leading-tight"
                   style={{ color: "var(--text-primary)" }}
                 >
                   {selected.title}
@@ -267,7 +271,8 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="shrink-0 w-9 h-9 border flex items-center justify-center transition-all"
                     style={{
-                      borderColor: "color-mix(in srgb, var(--border) 30%, transparent)",
+                      borderColor:
+                        "color-mix(in srgb, var(--border) 30%, transparent)",
                       color: "var(--text-primary)",
                     }}
                     aria-label="GitHub"
@@ -371,7 +376,8 @@ export default function Projects() {
                       key={f}
                       className="text-xs px-3 py-1 font-medium"
                       style={{
-                        border: "2px solid color-mix(in srgb, var(--border) 30%, transparent)",
+                        border:
+                          "2px solid color-mix(in srgb, var(--border) 30%, transparent)",
                         backgroundColor:
                           "color-mix(in srgb, var(--text-primary) 5%, transparent)",
                         color: "var(--text-primary)",

@@ -18,13 +18,6 @@ export default function Contact() {
     }
   };
 
-  // const iconFor = (type: string) => {
-  //   if (type === "phone") return <HiOutlinePhone className="w-6 h-6" />;
-  //   if (type === "email") return <HiOutlineMail className="w-6 h-6" />;
-  //   if (type === "link") return <FaLinkedin className="w-6 h-6" />;
-  //   return <FaGithub className="w-6 h-6" />;
-  // };
-
   return (
     <motion.section
       id="Contact"
@@ -34,66 +27,51 @@ export default function Contact() {
       transition={{ duration: 0.8 }}
       className="px-6 lg:px-24 xl:px-36 py-32 bg-[var(--bg-primary)] relative overflow-hidden"
     >
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.02] pointer-events-none">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `
-              linear-gradient(var(--text-primary) 1px, transparent 1px),
-              linear-gradient(90deg, var(--text-primary) 1px, transparent 1px)
-            `,
-            backgroundSize: "60px 60px",
-          }}
-        />
-      </div>
-
       <div className="max-w-4xl mx-auto relative">
         <SectionHeader
           title="Get In Touch"
           subtitle="Choose the best way to reach out"
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {contactMethods.map((c) => (
             <div
               key={c.id}
-              className="p-6 rounded-2xl border-2 border-[var(--border)]/10 bg-[var(--bg-primary)] flex flex-col gap-4 hover:shadow-[6px_6px_0px_0px_var(--text-primary)] transition-all"
+              className="p-4 rounded-xl border border-[var(--border)]/10 bg-[var(--surface)] flex flex-col gap-3 h-full transition-colors hover:bg-[var(--bg-secondary)]"
             >
               <div className="flex items-center justify-between">
-                <div className="w-12 h-12 rounded-lg border border-[var(--border)]/15 bg-[var(--text-primary)]/5 flex items-center justify-center text-[var(--text-primary)]">
+                <div className="w-10 h-10 rounded-lg border border-[var(--border)]/15 bg-[var(--text-primary)]/5 flex items-center justify-center text-[var(--text-primary)]">
                   {c.type === "phone" ? (
-                    <HiOutlinePhone className="w-6 h-6" />
+                    <HiOutlinePhone className="w-5 h-5" />
                   ) : c.type === "email" ? (
-                    <HiOutlineMail className="w-6 h-6" />
+                    <HiOutlineMail className="w-5 h-5" />
                   ) : c.id === "telegram" ? (
-                    <FaTelegramPlane className="w-5 h-5" />
+                    <FaTelegramPlane className="w-4 h-4" />
                   ) : c.id === "linkedin" ? (
-                    <FaLinkedin className="w-5 h-5" />
+                    <FaLinkedin className="w-4 h-4" />
                   ) : (
-                    <FaGithub className="w-5 h-5" />
+                    <FaGithub className="w-4 h-4" />
                   )}
                 </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => handleCopy(c.title, c.id)}
-                    className="p-2 rounded-md border border-[var(--border)]/10 text-[var(--text-secondary)] hover:bg-[var(--surface)] transition-colors"
-                    aria-label="Copy"
-                  >
-                    <FaCopy className="w-4 h-4" />
-                  </button>
-                </div>
+                <button
+                  onClick={() => handleCopy(c.title, c.id)}
+                  className="p-1 rounded text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                  aria-label="Copy"
+                >
+                  <FaCopy className="w-4 h-4" />
+                </button>
               </div>
 
               <div>
-                <h3 className="font-display text-xl text-[var(--text-primary)] mb-1">
+                <h3 className="font-display text-lg text-[var(--text-primary)] mb-0.5">
                   {c.title}
                 </h3>
-                <p className="text-sm text-[var(--text-secondary)] mb-4">
+                <p className="text-sm text-[var(--text-secondary)]">
                   {c.subtitle}
                 </p>
               </div>
 
-              <div className="mt-auto">
+              <div className="flex items-center gap-3">
                 <a
                   href={c.href}
                   target={c.href.startsWith("http") ? "_blank" : undefined}
@@ -102,14 +80,12 @@ export default function Contact() {
                       ? "noopener noreferrer"
                       : undefined
                   }
-                  className="inline-flex items-center gap-2 font-mono text-sm uppercase tracking-widest text-[var(--text-primary)] hover:text-[var(--accent)]"
+                  className="inline-flex items-center gap-2 text-sm text-[var(--text-primary)] hover:text-[var(--accent)]"
                 >
-                  <span>Open</span>
+                  <span>Visit</span>
                 </a>
                 {copied === c.id && (
-                  <span className="ml-3 text-sm text-[var(--accent)]">
-                    Copied!
-                  </span>
+                  <span className="text-sm text-[var(--accent)]">Copied!</span>
                 )}
               </div>
             </div>

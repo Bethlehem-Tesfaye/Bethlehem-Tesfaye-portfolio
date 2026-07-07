@@ -47,7 +47,7 @@ export function SectionHeader({
           Section
         </span>
       </div>
-      <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight text-[var(--text-primary)]">
+      <h2 className="font-display text-[34px] md:text-[42px] lg:text-[50px] tracking-tight text-[var(--text-primary)]">
         {title}
       </h2>
       {subtitle && (
