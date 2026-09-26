@@ -1,4 +1,4 @@
-import { aau, chat, event, expense, swen, roommatch } from "../assets";
+import { aau, chat, event, expense, swen, roommatch, nosyWallet } from "../assets";
 
 export const RESUME_LINK =
   "https://drive.google.com/file/d/1STqUL7oeOKNTpxk-LZHogr1WbsxtdNf_/view?usp=sharing";
@@ -46,6 +46,15 @@ export interface ProjectItem {
 
 export const experiences: ExperienceItem[] = [
   {
+    id: "swenetix-junior",
+    imageSrc: swen,
+    imageAlt: "Swentix Tech PLC",
+    title: "Junior Full Stack Developer @ Swentix Tech PLC",
+    description: `Working as a Junior Full Stack Developer at Swentix Tech PLC (formerly Addis Software).
+        Contributing to full-stack feature development across web platforms — building Node.js/Express APIs, React/TypeScript UIs, and maintaining production systems for enterprise clients.`,
+    link: "https://swenetix.com/",
+  },
+  {
     id: "swenetix-intern",
     imageSrc: swen,
     imageAlt: "Swenetix",
@@ -68,6 +77,40 @@ export const experiences: ExperienceItem[] = [
 ];
 
 export const projects: ProjectItem[] = [
+  {
+    id: "nosy-wallet",
+    imageSrc: nosyWallet,
+    imageAlt: "Nosy Wallet – Ezpense Tracker",
+    title: "Nosy Wallet – Smart Mobile Expense Tracker",
+    description:
+      "A fully offline Android expense tracker that auto-imports transactions from Ethiopian bank SMS messages, tracks budgets per category, and supports the Ethiopian calendar — all with a beautiful dark-themed UI.",
+    highlights: [
+      "Built an SMS auto-import engine with a custom regex parser for CBE, Awash, and Amhara Bank SMS formats",
+      "Implemented background headless JS task that runs even when the app is closed to capture incoming bank SMS",
+      "Designed a full SQLite database layer using Drizzle ORM with type-safe schema migrations",
+      "Built Ethiopian calendar support from scratch using Julian Day Number conversion with zero external dependencies",
+      "Added biometric / PIN app lock with deep-link pass-through after authentication",
+      "Shipped full backup/restore system (JSON + CSV export), per-category budgets, recurring reminders, and 6 color theme palettes",
+    ],
+    features: [
+      "React Native",
+      "Expo SDK 57",
+      "TypeScript",
+      "Drizzle ORM",
+      "SQLite",
+      "NativeWind",
+      "expo-notifications",
+      "expo-local-authentication",
+      "react-native-svg",
+    ],
+    link: "https://github.com/Bethlehem-Tesfaye",
+    githubLink: "https://github.com/Bethlehem-Tesfaye",
+    tryThis: [
+      "Grant SMS permissions to auto-import bank transactions",
+      "Set per-category budgets and watch the live ring gauges update",
+      "Switch to Ethiopian calendar in Settings",
+    ],
+  },
   {
     id: "eventlight",
     imageSrc: event,
@@ -219,11 +262,12 @@ export const skills: SkillCategory[] = [
     title: "Frontend Development",
     items: [
       "React",
+      "React Native",
       "TypeScript",
       "JavaScript (ES6+)",
       "HTML",
       "CSS",
-      "Tailwind CSS",
+      "Tailwind CSS / NativeWind",
       "Redux",
       "TanStack Query",
     ],
@@ -234,8 +278,10 @@ export const skills: SkillCategory[] = [
     items: [
       "PostgreSQL",
       "MongoDB (NoSQL)",
+      "SQLite",
       // ✅ ADDED: Prisma is in every project, should be in skills too
       "Prisma ORM",
+      "Drizzle ORM",
     ],
   },
   {
@@ -253,7 +299,7 @@ export const skills: SkillCategory[] = [
   {
     id: "tools",
     title: "DevOps & Tools",
-    items: ["Git", "GitHub", "Docker", "Postman", "Figma"],
+    items: ["Git", "GitHub", "Docker", "Postman", "Figma", "Expo"],
   },
   {
     id: "also-familiar",
